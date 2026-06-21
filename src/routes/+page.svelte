@@ -5,6 +5,11 @@
   const { data } = $props();
 
   const books = $derived(data.books);
+
+  async function loadPosts() {
+    const posts = await getPosts();
+    console.log("posts", posts);
+  }
 </script>
 
 <h1>Welcome to SvelteKit 5</h1>
@@ -14,4 +19,5 @@
   {#each books as book}
     <p>{book.title}</p>
   {/each}
+  <button onclick={loadPosts}>Load Posts</button>
 </div>

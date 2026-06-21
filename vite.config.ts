@@ -7,10 +7,10 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     sveltekit({
-      kit: {
-        experimental: {
-          remoteFunctions: true,
-        },
+      alias: {
+        $db: "src/db",
+        $data: "src/data",
+        $drizzle: "src/drizzle",
       },
       compilerOptions: {
         // Force runes mode for the project, except for libraries. Can be removed in svelte 6.

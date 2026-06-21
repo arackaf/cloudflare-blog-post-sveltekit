@@ -4,12 +4,14 @@
 
   const { data } = $props();
 
-  const foo = await getPosts();
-
-  console.log("foo", foo);
+  const books = $derived(data.books);
 </script>
 
 <h1>Welcome to SvelteKit 5</h1>
 <p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
 
-Secret {data.value}
+<div class="flex flex-col gap-2">
+  {#each books as book}
+    <p>{book.title}</p>
+  {/each}
+</div>

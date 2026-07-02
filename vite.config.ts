@@ -19,6 +19,9 @@ export default defineConfig({
           async: true,
         },
       },
+      experimental: {
+        remoteFunctions: true,
+      },
       adapter: adapter(),
     }),
   ],

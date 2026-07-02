@@ -21,6 +21,6 @@
     },
   ],
   "secrets": {
-    "required": ["SECRET_1", "SECRET_2", "SECRET_3"],
+    "required": ["SECRET_1"],
   },
 }

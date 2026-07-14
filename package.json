@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build && wrangler types --check",
+    "build": "vite build",
     "preview": "npm run build && wrangler dev",
     "prepare": "svelte-kit sync || echo ''",
     "check": "wrangler types --check && svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -14,7 +14,8 @@
     "format": "prettier --write .",
     "gen": "wrangler types",
     "deploy": "npm run build && wrangler deploy",
-    "cf-typegen": "wrangler types"
+    "cf-typegen": "wrangler types",
+    "pg": "docker container run -e POSTGRES_USER=docker -e POSTGRES_PASSWORD=docker -p 5432:5432 -v ~/Documents/pg-data:/var/lib/postgresql postgres:18.2-alpine3.23"
   },
   "devDependencies": {
     "@sveltejs/adapter-cloudflare": "^7.2.8",

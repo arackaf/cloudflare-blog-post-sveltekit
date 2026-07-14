@@ -20,7 +20,4 @@
       "localConnectionString": "postgresql://docker:docker@localhost:5432/my_library",
     },
   ],
-  "secrets": {
-    "required": ["SECRET_1"],
-  },
 }
